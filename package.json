@@ -1,0 +1,25 @@
+{
+  "name": "code-challenge-phase1",
+  "version": "1.0.0",
+  "description": "code-challenge-phase1",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Grade",
+    "Generator",
+    "speed",
+    "detector",
+    "net",
+    "salary",
+    "calculator"
+  ],
+  "author": "antonioomodho",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {}
+}
