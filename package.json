@@ -19,7 +19,7 @@
   "author": "antonioomodho",
   "license": "ISC",
   "dependencies": {
-    "prompt-sync": "^4.2.0"
-  },
-  "devDependencies": {}
+    "prompt-sync": "^4.2.0",
+    "prompt-sync-history": "^1.0.1"
+  }
 }
