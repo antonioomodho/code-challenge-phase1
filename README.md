@@ -99,6 +99,92 @@ console.log(speedLimitDetector(75));
 
 Challenge 3: Net Salary Calculator (Toy Problem)
 
+//We declare variables using let for salary,benefits,Nhif,Nssf, Paye in order to be able to assign them a value 
+let salary;
+let benefits;
+let NHIF;
+let NSSF;
+let PAYE;
+//Declaring a function salarycalculation with the parameters salary and benefits
+function salaryCalculation(salary, benefits){
+    let gross = salary + benefits; //declaring Variable gross
+    let NSSF = gross * 0.06; //Declaring Variable gross
+    // let netCalculator = gross;
+    //if else if ladder statement in a function to get PAYE
+if (gross <= 24000) {
+        PAYE = (gross*0.1)
+    }
+    else if (gross >= 32333) {
+       PAYE = (gross*0.3)
+    }
+    else if (gross >= 24001) {
+        PAYE = (gross*0.25)
+    }
+    //console.log to run the code on terminal to output gross,paye and nssf
+console.log('Gross salary:', gross)
+ console.log('PAYE deductions:', PAYE)
+ console.log('NSSF deduction:', NSSF)
+//NHIF Determination
+        if (gross <= 5999 ){
+            NHIF = (150)}
+        else if
+         (gross > 6000 && gross <= 7999) {
+            NHIF = (300)}
+        else if
+        ( gross > 8000 && gross <= 11999){
+            NHIF = (400)}
+        else if 
+        ( gross > 12000 && gross <= 14999) {
+            NHIF = (500) }
+        else if 
+        (gross > 15000 && gross <= 19999) {
+            NHIF = (600) }
+        else if
+        (gross > 15000 && gross <= 24999) {
+            NHIF =  (750)}
+        else if
+        ( gross > 25000 && gross <= 29999){
+            NHIF = (850)}
+        else if 
+        (gross > 30000 && gross <= 34999) {
+            NHIF = (900) }
+        else if 
+        (gross > 35000 && gross <= 39999) {
+            NHIF = (950) }
+        else if 
+        (gross > 40000 && gross <= 44999) {
+            NHIF =(1000) }
+        else if 
+        (gross > 45000 && gross <= 49999) {
+            NHIF = (1100) }
+        else if  
+        (gross > 50000 && gross <= 59999){
+            NHIF = (1200) }
+        else if 
+        (gross > 60000 && gross <= 69999) {
+            NHIF = (1300) }
+        else if 
+        (gross > 70000 && gross <= 79999) {
+            NHIF = (1400) }
+        else if  
+        (gross > 80000 && gross <= 89999) {
+            NHIF = (1500) }
+        else if 
+        (gross > 90000 && gross <= 99999) {
+            NHIF = (1600) }
+        else if 
+        (gross >= 100000) {
+            NHIF = (1700)
+            //To display the netSalary on terminal
+    console.log('NHIF deduction:', NHIF)
+    console.log('Taxes: PAYE + NSSF + NHIF :', (NSSF + PAYE + NHIF ))
+    let netSalary = 'Net Salary:  ' + (gross - (NSSF + PAYE + NHIF ))
+    return netSalary;
+}
+}
+        console.log(salaryCalculation(67000, 8900, 890000));
+
+
 ## Authors
 
 - [@antonioomodho](https://www.github.com/antonioomodho)
