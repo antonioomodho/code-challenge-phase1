@@ -26,6 +26,9 @@ https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
 ## Project setup
 
 Challenge 1: Student Grade Generator (Toy Problem)
+In this challenge we will open the index.html file located in the directory students-grade-generator in our visual studio and go live to the browser to run the code and prompt page will appear that allows us to input data.
+
+The code that allows for the calculation and execution is writen below
 
 //prompt const to allow us key in grades anytime asked
 
@@ -52,8 +55,8 @@ function grade(scores){
     else if (scores<=59 && scores>=49){
             return alert(`Your grade is C`)
     }
-    //scores btn 69 to 79
-    else if(scores<=79&& scores>=69){
+    //scores btn 59 to 69
+    else if(scores<=69&& scores>=59){
        return alert(`Your grade is B`)
     }
     //scores above 79 upto 100
@@ -68,11 +71,19 @@ function grade(scores){
     //To call the function grade and give us output
 grade(scores);
 
-We have and index.html file in the directory students-grade-generator that links the index.js to prompt on your browser for input
+We have an index.html file in the directory students-grade-generator that links the index.js to prompt on your browser for input and gives output of the same simultaniously.
 
 
 
 Challenge 2: Speed Detector (Toy Problem)
+we install npm to allow us run the code on our terminal. In this project we have an index.js file which we will use node index.js command to run it in our terminal to get results.
+
+please not that in the last line of code i.e 
+        console.log(speedLimitDetector(75));
+we input different values of our choice in the parenthesis with an integer to allow us get the speed limit detector values.
+
+Below is the line of codes that determines the speed limits and points awarded together with comments to the line of codes.
+
 //The speed limit is set to 70km/h hence the variable let speed be 70
 let speedLimit = 70
 //We create a function speedLimitDetector with the parameter speed
@@ -99,6 +110,14 @@ console.log(speedLimitDetector(75));
 
 Challenge 3: Net Salary Calculator (Toy Problem)
 
+In this project we have an index.js file in the Net-Salary-Calculator folder.we dont install npm to allow us run the code on our terminal since we already did that and the node_module directory exists. We will use node index.js command to run it to get results.
+
+please not that in the last line of code i.e 
+        console.log(salaryCalculation(67000, 8900, 890000));
+we input different values of our choice in the parenthesis with an integer to allow as get the salary calculations.
+
+Below is the line of codes with the fuctions that execute the tasks required.
+
 //We declare variables using let for salary,benefits,Nhif,Nssf, Paye in order to be able to assign them a value 
 let salary;
 let benefits;
@@ -124,7 +143,7 @@ if (gross <= 24000) {
 console.log('Gross salary:', gross)
  console.log('PAYE deductions:', PAYE)
  console.log('NSSF deduction:', NSSF)
-//NHIF Determination
+//NHIF Determination if statement function
         if (gross <= 5999 ){
             NHIF = (150)}
         else if
