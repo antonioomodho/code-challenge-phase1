@@ -23,12 +23,12 @@ function grade(scores){
     else if (scores<=59 && scores>=49){
             return alert(`Your grade is C`)
     }
-    //scores btn 69 to 79
-    else if(scores<=79&& scores>=69){
+    //scores btn 60 to 79
+    else if(scores<=79&& scores>=60){
        return alert(`Your grade is B`)
     }
     //scores above 79 upto 100
-    else{
+    else(scores<=100&& scores >=80);{
         return alert("Your grade is A")
     }
     
