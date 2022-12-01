@@ -2,206 +2,49 @@
 # CODE CHALLENGE PHASE 1
 
 ## Project Description
-CHALLENGE 1  Student Grade Generator (Toy Problem)
-Student Grade Generator i.e Write that prompts the user to input student marks.
-The input should be between 0 and 100. 
-Then output the correct grade: 
-A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
-
-CHALLENGE 2  Speed Detector (Toy Problem)
-Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70,   it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
-
-For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
-
-CHALLENGE 3  Net Salary Calculator (Toy Problem)
-Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary.
-
-NB: Use KRA, NHIF, and NSSF values provided in the link below.
-
-https://www.aren.co.ke/payroll/taxrates.htm Links to an external site.  
-
-https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
-
+This project contains 3 challenges all stored in one directory named code-challenge-phase1. Each challenge is then stored in a sub directory within the main directory i.e Challenge 1 is students-grade-generator, challenge 2 is speed-detector and lastly challenge 3 is net-salary calculator.
 
 ## Project setup
+To run the project, we will git clone it from github to our remote machine and open it in visual studio code. We will then open terminal under the right directory in our remote machine and install npm using the command 'npm install' . This will install the right dependencies needed to run the program successfully under the folder node_modules in the directory code-challenge-phase1. We then proceed to install prompt using the command npm install prompt-sync. This will help us run and test our challenge 1 project (students-grade-generator) using a prompt that will appear on the browser.
 
-Challenge 1: Student Grade Generator (Toy Problem)
-In this challenge we will open the index.html file located in the directory students-grade-generator in our visual studio and go live to the browser to run the code and prompt page will appear that allows us to input data.
-
-The code that allows for the calculation and execution is writen below
-
-//prompt const to allow us key in grades anytime asked
-
-const scores = parseInt( prompt("Please enter your Score: "));
-//let score prompt("Please enter your grade");
-//CReated a function grade that has the parameter scores
-function grade(scores){ 
-     //we use an if else if ladder statement to help us determine each grade once scores are keyed in
-    if(scores>100 && scores<0){ 
-        return  alert(`Invalid Input`)
-        
-    }
-    //Scores below 40
-    else if(scores<40){
-        return alert(`Your grade is E`)
-        
-    }
-    //scores btn 40 to 49
-    else if (scores<=49 && scores>=40){
-      return alert( `Your grade is D`)
-        
-    }
-    //scores btn 49 to 59
-    else if (scores<=59 && scores>=49){
-            return alert(`Your grade is C`)
-    }
-    //scores btn 59 to 69
-    else if(scores<=69&& scores>=59){
-       return alert(`Your grade is B`)
-    }
-    //scores above 79 upto 100
-    else{
-        return alert("Your grade is A")
-    }
-    
-   
-    
-   
-    }
-    //To call the function grade and give us output
-grade(scores);
-
-We have an index.html file in the directory students-grade-generator that links the index.js to prompt on your browser for input and gives output of the same simultaniously.
+Challenge 1: (Student-grade-generator)
+In this challenge, note that all the files in this directory students-grade-generator is only for the challenge.
+Open index.js in the folder and you'll find a detailed code with comments on how the grades will be generated.
+To run the code you will go to index.html file under the same directory. If you are using VS code, install an extension called 'live server' to enable you redirect to your browser through the prompt for test using the button 'Go Live' at the bottom right of VS code.
 
 
+Challenge 2: (Speed Detector)
+In the directory speed-detector, open index.js file.
+This file has a well commented code that tests different speed limits.
+To test the project we go to the last line of code i.e
 
-Challenge 2: Speed Detector (Toy Problem)
-we install npm to allow us run the code on our terminal. In this project we have an index.js file which we will use node index.js command to run it in our terminal to get results.
-
-please not that in the last line of code i.e 
-        console.log(speedLimitDetector(75));
-we input different values of our choice in the parenthesis with an integer to allow us get the speed limit detector values.
-
-Below is the line of codes that determines the speed limits and points awarded together with comments to the line of codes.
-
-//The speed limit is set to 70km/h hence the variable let speed be 70
-let speedLimit = 70
-//We create a function speedLimitDetector with the parameter speed
-function speedLimitDetector(vehicleSpeed){
-    if(vehicleSpeed < speedLimit){
-        return "Driver's Speed is within specified limit" 
-        //If speed was not exceeded then you get an OK to mean the driver is within speed limit
-    }else{
-        let driverPoints = ((vehicleSpeed - speedLimit) / 5) 
-        //The the current speed, minus the speed limit and divide by 5 to get points
-        if(driverPoints >= 12){
-            return "License suspended"
-        //If the drivers points are 12 or more then the licence is suspended  
-        }else {
-            return 'Points:' + driverPoints
-        }
-    }
-}
-//Input the speed to test the limit and generate points i.e where the parenthesis holds the value 75
-console.log(speedLimitDetector(75));
+          //Input the speed to test the limit and generate points
+               console.log(speedLimitDetector(80));
 
 
+We then input different values of our choice in the parenthesis with an integer to allow us get the speed limit detector points.
+To test this we will write a comman 'node index.js' in our terminal then press enter and the results will be
+                      // =>  points:2
+Feel free to input different values and test to see various points for different speeds.
 
 
-Challenge 3: Net Salary Calculator (Toy Problem)
+Challenge 3: (net-salary-calculator)
+In the directory net-salary-calculator, open index.js file.
+This file has a well commented code that calculates the net salary.
+To test the project we go to the last line of code i.e
 
-In this project we have an index.js file in the Net-Salary-Calculator folder.we dont install npm to allow us run the code on our terminal since we already did that and the node_module directory exists. We will use node index.js command to run it to get results.
+          console.log(salaryCalculation(100000,20000));
+          
+We then input different values of our choice in the parenthesis with an integer ((salary,benefits)=Gross salary) to allow us get the net salary.
+To test this we will write a comman 'node index.js' in our terminal then press enter and the results will be
 
-please not that in the last line of code i.e 
-        console.log(salaryCalculation(67000, 8900, 890000));
-we input different values of our choice in the parenthesis with an integer to allow as get the salary calculations.
-
-Below is the line of codes with the fuctions that execute the tasks required.
-
-//We declare variables using let for salary,benefits,Nhif,Nssf, Paye in order to be able to assign them a value 
-let salary;
-let benefits;
-let NHIF;
-let NSSF;
-let PAYE;
-//Declaring a function salarycalculation with the parameters salary and benefits
-function salaryCalculation(salary, benefits){
-    let gross = salary + benefits; //declaring Variable gross
-    let NSSF = gross * 0.06; //Declaring Variable gross
-    // let netCalculator = gross;
-    //if else if ladder statement in a function to get PAYE
-if (gross <= 24000) {
-        PAYE = (gross*0.1)
-    }
-    else if (gross >= 32333) {
-       PAYE = (gross*0.3)
-    }
-    else if (gross >= 24001) {
-        PAYE = (gross*0.25)
-    }
-    //console.log to run the code on terminal to output gross,paye and nssf
-console.log('Gross salary:', gross)
- console.log('PAYE deductions:', PAYE)
- console.log('NSSF deduction:', NSSF)
-//NHIF Determination if statement function
-        if (gross <= 5999 ){
-            NHIF = (150)}
-        else if
-         (gross > 6000 && gross <= 7999) {
-            NHIF = (300)}
-        else if
-        ( gross > 8000 && gross <= 11999){
-            NHIF = (400)}
-        else if 
-        ( gross > 12000 && gross <= 14999) {
-            NHIF = (500) }
-        else if 
-        (gross > 15000 && gross <= 19999) {
-            NHIF = (600) }
-        else if
-        (gross > 15000 && gross <= 24999) {
-            NHIF =  (750)}
-        else if
-        ( gross > 25000 && gross <= 29999){
-            NHIF = (850)}
-        else if 
-        (gross > 30000 && gross <= 34999) {
-            NHIF = (900) }
-        else if 
-        (gross > 35000 && gross <= 39999) {
-            NHIF = (950) }
-        else if 
-        (gross > 40000 && gross <= 44999) {
-            NHIF =(1000) }
-        else if 
-        (gross > 45000 && gross <= 49999) {
-            NHIF = (1100) }
-        else if  
-        (gross > 50000 && gross <= 59999){
-            NHIF = (1200) }
-        else if 
-        (gross > 60000 && gross <= 69999) {
-            NHIF = (1300) }
-        else if 
-        (gross > 70000 && gross <= 79999) {
-            NHIF = (1400) }
-        else if  
-        (gross > 80000 && gross <= 89999) {
-            NHIF = (1500) }
-        else if 
-        (gross > 90000 && gross <= 99999) {
-            NHIF = (1600) }
-        else if 
-        (gross >= 100000) {
-            NHIF = (1700)
-            //To display the netSalary on terminal
-    console.log('NHIF deduction:', NHIF)
-    console.log('Taxes: PAYE + NSSF + NHIF :', (NSSF + PAYE + NHIF ))
-    let netSalary = 'Net Salary:  ' + (gross - (NSSF + PAYE + NHIF ))
-    return netSalary;
-}
-}
-        console.log(salaryCalculation(67000, 8900, 890000));
+                    // => Gross salary: 120000
+                          PAYE deductions: 36000
+                          NSSF deduction: 7200
+                          NHIF deduction: 1700
+                          Taxes: PAYE + NSSF + NHIF : 44900
+                          Net Salary:  75100
+Feel free to input different values and test to see diferent net salaries.
 
 
 ## Authors
