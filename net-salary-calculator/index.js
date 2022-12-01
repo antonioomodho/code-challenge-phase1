@@ -7,8 +7,7 @@ let PAYE;
 //Declaring a function salarycalculation with the parameters salary and benefits
 function salaryCalculation(salary, benefits){
     let gross = salary + benefits; //declaring Variable gross
-    let NSSF = gross * 0.06; //Declaring Variable gross
-    // let netCalculator = gross;
+    let NSSF = gross * 0.06; //Declaring Variable NSSF
     //if else if ladder statement in a function to get PAYE
 if (gross <= 24000) {
         PAYE = (gross*0.1)
@@ -81,4 +80,4 @@ console.log('Gross salary:', gross)
     return netSalary;
 }
 }
-        console.log(salaryCalculation(67000, 8900, 890000));
+        console.log(salaryCalculation(100000, 20000));
